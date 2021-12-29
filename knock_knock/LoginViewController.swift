@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class LoginViewController: UIViewController {
 
@@ -36,11 +39,21 @@ class LoginViewController: UIViewController {
     NSLayoutConstraint.activate([
       kakaoLoginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       kakaoLoginButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-      ])
+    ])
   }
 
   @objc func doLogin() {
     print("clicked")
+    if(UserApi.isKakaoTalkLoginAvailable()) {
+      UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+        if let error = error {
+          print(error)
+        } else {
+          print("loginWithKakaoTalk() success.")
+          _ = oauthToken
+        }
+      }
+    }
   }
 
 }

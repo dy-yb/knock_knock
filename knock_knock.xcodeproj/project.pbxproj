@@ -98,11 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 619536C42774468A0021DF77 /* Build configuration list for PBXNativeTarget "knock_knock" */;
 			buildPhases = (
-				619536C7277448AE0021DF77 /* SwiftLint Script */,
 				EC8C75E0ECDDA35370AACE87 /* [CP] Check Pods Manifest.lock */,
+				619536C7277448AE0021DF77 /* SwiftLint Script */,
 				619536AC277446890021DF77 /* Sources */,
 				619536AD277446890021DF77 /* Frameworks */,
 				619536AE277446890021DF77 /* Resources */,
+				5711E91730ED5B278637CCFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +161,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5711E91730ED5B278637CCFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-knock_knock/Pods-knock_knock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-knock_knock/Pods-knock_knock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-knock_knock/Pods-knock_knock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		619536C7277448AE0021DF77 /* SwiftLint Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
